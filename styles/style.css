@@ -2,10 +2,91 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  /* background-image: var(--header-bg-image);
+  background-color: black;
+  background-size: 668px;
+  background-attachment: fixed;
+  background-position-x: center; */
+  margin: 0;
 }
 
 .header {
+  position: relative;
   display: grid;
-  grid-template-rows: 3 1fr;
-  justify-content: end;
+  grid-template-rows: 1fr auto 1fr;
+  padding-left: 10px;
+  padding-right: 10px;  
+  min-height: 668px;
+  inset: 0;
+  align-items: center
 }
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  width: 25px;
+  height: 24px;
+  bottom: 10px;
+  left: 10px;
+}
+
+.header__theme-menu {
+  justify-items: right;
+  align-content: end;
+  background-color: transparent;
+ }
+
+.header__theme-menu-list {
+  margin: 0;
+}
+
+.header__theme-menu-item {
+  display: block;
+  padding: 5.5px;
+  list-style: none; 
+}
+
+.header__theme-menu-button {
+  font-family: var(--page-font-family),sans-serif;
+  background-color: transparent;
+  border: none;
+  font-size: var(--text-foont-size);
+  color: var(--accent-color);
+
+}
+
+
+.heading {
+  font-family: var(--page-font-family),sans-serif;
+  font-weight: bold;
+  font-size: var(--heading-font-size);
+  line-height: 83%;
+  color: var(--heading-color);
+  text-shadow: 4px 4px 0 var(--accent-color);  
+  margin: 0;
+}
+
+.title {
+  display: inline-block;
+  font-family: var(--page-font-family),sans-serif;
+  font-size: var(--text-foont-size);
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  background-position: center ;
+  margin: 0;
+}
+
