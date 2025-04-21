@@ -54,7 +54,7 @@
   align-items: center;
   gap: 11px;
   color: var(--accent-color);
-  font-family: var(--font-family),sans-serif;
+  font-family: var(--font-family, sans-serif);
   font-size: var(--text-foont-size);
   text-transform:uppercase;
   inset-block-start: clamp(0.75rem, 0.2133rem + 2.2901vw, 1.3125rem);
@@ -90,7 +90,7 @@
 .header__theme-menu-button {
   border: none;
   color: var(--accent-color);
-  font-family: var(--font-family),sans-serif;
+  font-family: var(--font-family, sans-serif);
   font-size: var(--text-foont-size);
   text-transform: lowercase;
   background-color: transparent;
@@ -99,7 +99,7 @@
 .header__heading {  
   margin: 0;
   color: var(--heading-color);
-  font-family: var(--font-family),sans-serif;
+  font-family: var(--font-family, sans-serif);
   font-weight: bold;
   font-size: var(--heading-font-size);
   line-height: 83%;
@@ -113,7 +113,7 @@
 .header__title {
   display: inline-block;
   margin: 0;
-  font-family: var(--font-family,sans-serif);
+  font-family: var(--font-family, sans-serif);
   font-weight: bold;
   line-height: 23.4px;
   background-position: center;
@@ -130,11 +130,12 @@
 .content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px;
-  margin-block-start: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);;
-  padding:0 var(--padding-page);
+  gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+  margin-block-start: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  padding: 0 var(--padding-page); 
   color: var(--text-color);
   font-size: var(--text-foont-size); 
+
 }  
 
 .content__section {
@@ -215,6 +216,7 @@
   .header {
     height: max(100vh, 1024px);
     padding-inline-start: 3px;
+  
   }
 
   .title {
@@ -225,6 +227,7 @@
 
   .content__section {
     grid-template-columns: repeat(3, 1fr);
+    font-weight: normal;
 
   }
   
@@ -266,8 +269,7 @@
 @media (width >= 1024px) {
 
   .header {
-    height: max(100vh, 768px);
-    
+    height: max(100vh, 768px);    
   }
  
   .header__theme-menu {
@@ -281,12 +283,9 @@
   }
 
   .header__theme-menu-item {
-
     padding-inline-start: 0;
 
    }
-
- 
 
   .content__article-section {
     grid-column: auto;
