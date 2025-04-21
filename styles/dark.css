@@ -9,10 +9,14 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --header-bg-image: url(../images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
   --heading-color: #db00ff;
   --accent-color: #ff0070;
   --title-text-color:#000;
+  --text-foont-size: 18px;
+  --text-color: #F1B2CE;
+  --bg-color: #000;
+  --heading-text-color:#ff0070;
 
 }
 
