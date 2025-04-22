@@ -34,6 +34,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+  
   :root {
     /* Дублируем переменные светлой темы */  
     --bg-image: url(../images/cover-image-light.png);
@@ -54,7 +55,7 @@
     /* Вам также нужно будет написать ряд подобных селекторов */
     display: none;
   }
-  
+
   @media (width >= 1024px) {
     :root.theme-light {
       --text-shadow-color: #ff0070;
