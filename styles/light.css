@@ -10,44 +10,41 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-image: url(../images/cover-image-light.png);
-  --heading-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --title-text-color:#353430;
   --text-color: #353430;
+  --heading-color: #FFC2E6;
   --bg-color: #FFC2E6;
+  --title-text-color:#353430;
+  --accent-color: #FF8DCB;
   --heading-text-color:#353430;
   --color-decorated: #353430;
   --text-menu-color: #353430;
   --text-shadow-color: #ff8dcb;
 }
 
-
-.theme-light .header__rec{
-  /* Вам также нужно будет написать ряд подобных селекторов */
-display: none;
+.theme-light .header__rec {
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */  
     --bg-image: url(../images/cover-image-light.png);
-    --heading-color: #FFC2E6;
-    --accent-color: #FF8DCB;
-    --title-text-color:#353430;
     --text-color: #353430;
+    --heading-color: #FFC2E6;
     --bg-color: #FFC2E6;
+    --title-text-color:#353430;
+    --accent-color: #FF8DCB;
     --heading-text-color:#353430;
     --color-decorated: #353430;
     --text-menu-color: #353430;
     --text-shadow-color: #ff8dcb;
   }
 
-  .header__rec{
+  .header__rec {
     /* Вам также нужно будет написать ряд подобных селекторов */
-  display: none;
+    display: none;
   }
 }
-
 
 @media (width >= 1024px) {
   :root.theme-light {

@@ -184,7 +184,7 @@
   text-decoration: none;
   text-decoration-color: none;
   text-shadow: 2px  2px 0 var(--accent-color);
-  color: var( --text-color);
+  color: var(--text-color);
 }
 
 .section__gallery {
