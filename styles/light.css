@@ -19,10 +19,18 @@
   --color-decorated: #353430;
   --text-menu-color: #353430;
   --text-shadow-color: #ff8dcb;
+  --bottom-color: #353430;
+  --bottom-color-hover: #35343099;
 }
 
 .theme-light .header__rec {
   display: none;
+}
+
+@media (width >= 1024px) {
+  :root.theme-light {
+    --text-shadow-color: #ff0070;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -38,16 +46,19 @@
     --color-decorated: #353430;
     --text-menu-color: #353430;
     --text-shadow-color: #ff8dcb;
+    --bottom-color: #353430;
+    --bottom-color-hover: #35343099;
   }
 
   .header__rec {
     /* Вам также нужно будет написать ряд подобных селекторов */
     display: none;
   }
-}
-
-@media (width >= 1024px) {
-  :root.theme-light {
-    --text-shadow-color: #ff0070;
+  
+  @media (width >= 1024px) {
+    :root.theme-light {
+      --text-shadow-color: #ff0070;
+    }
   }
 }
+

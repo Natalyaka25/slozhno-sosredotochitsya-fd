@@ -19,6 +19,8 @@
   --color-decorated:  #FF0070;
   --text-menu-color: #FF0070;
   --text-shadow-color: #ff0070;
+  --bottom-color: #ff0070;
+  --bottom-color-hover: #ff007099;
 }
 
 .theme-dark .header__rec {

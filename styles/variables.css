@@ -12,6 +12,7 @@
   --padding-page: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   --rec-block-start: clamp(0.6875rem, 0.0911rem + 2.5445vw, 1.3125rem);
   --rec-inline-end: clamp(1.1875rem, 0.5911rem + 2.5445vw, 1.8125rem);
+  --margin-block-content  : clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
   --text-color: #F1B2CE;
   --heading-color: #db00ff;
   --bg-color: #000;
@@ -20,7 +21,9 @@
   --heading-text-color:#ff0070;
   --color-decorated:  #FF0070;
   --text-menu-color: #FF0070;
-  --text-shadow-color: #ff0070;;
+  --text-shadow-color: #ff0070;
+  --bottom-color: #ff0070;
+  --bottom-color-hover: #ff007099;
 }
 
 @media (width >= 768px) {
