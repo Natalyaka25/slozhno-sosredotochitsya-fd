@@ -16,6 +16,11 @@
   --heading-text-color:#ff0070;
   --padding-decorated-zone: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   --padding-page: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  --rec-block-start: clamp(0.6875rem, 0.0911rem + 2.5445vw, 1.3125rem);
+  --rec-inline-end: clamp(1.1875rem, 0.5911rem + 2.5445vw, 1.8125rem);
+  --color-decorated: #353430;
+  --text-menu-color:  #F1B2CE;
+  --text-shadow-color: #ff0070;;
   /* --bg-color: #f2f2f2;
   --text-color: #000;
   --article-bg-color: #6dc1fd;
@@ -28,5 +33,6 @@
 @media (width >= 768px) {
   :root {
     --heading-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+
   }
 }

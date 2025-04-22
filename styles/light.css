@@ -16,10 +16,15 @@
   --text-color: #353430;
   --bg-color: #FFC2E6;
   --heading-text-color:#353430;
+  --color-decorated: #353430;
+  --text-menu-color: #353430;
+  --text-shadow-color: #ff8dcb;
 }
 
-.theme-light .page {
+
+.theme-light .header__rec{
   /* Вам также нужно будет написать ряд подобных селекторов */
+display: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,6 +36,21 @@
     --title-text-color:#353430;
     --text-color: #353430;
     --bg-color: #FFC2E6;
-    --heading-text-color:#353430;  
+    --heading-text-color:#353430;
+    --color-decorated: #353430;
+    --text-menu-color: #353430;
+    --text-shadow-color: #ff8dcb;
+  }
+
+  .header__rec{
+    /* Вам также нужно будет написать ряд подобных селекторов */
+  display: none;
+  }
+}
+
+
+@media (width >= 1024px) {
+  :root.theme-light {
+    --text-shadow-color: #ff0070;
   }
 }
