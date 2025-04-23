@@ -2,7 +2,6 @@
 
 .page { 
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  margin: 0 auto;
   font-family: var(--font-family,sans-serif);
   background-color: var(--bg-color, #000);
   background-image: var(--bg-image);
@@ -10,7 +9,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  min-inline-size: 375px;
+  /* min-inline-size: 375px; */
   max-inline-size: 1024px;
 }
 
@@ -24,6 +23,7 @@
   align-items: center;
   padding: 0 var(--padding-page);
   block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .decorated-zone::after {
@@ -76,10 +76,6 @@
   background-color: transparent;
 }
 
-.header__theme-menu-list {
-  margin:0;
-}
-
 .header__theme-menu-item {
   display: block;
   padding-block-start: 10px;
@@ -100,7 +96,6 @@
 }
 
 .header__heading {
-  margin: 0;
   color: var(--heading-color);
   font-family: var(--font-family, sans-serif);
   font-weight: bold;
@@ -146,9 +141,8 @@
   gap: 20px;
 }
 
-.сontent__heading-h2 {
+.сontent__heading {
   display: inline-block;
-  margin: 0;
   color: var(--heading-text-color);
   font-family: inherit;
   font-size: var(--text-foont-size, 18px);
@@ -159,26 +153,26 @@
   gap: 10px;
 }
 
-.сontent__heading-h3 {
-  margin: 0;
+.content h3 {
+  display: block;
   font-weight: bold;
-  font-size: var(--text-foont-size, 18px);
-  line-height: 23.4px;
+  font-size: inherit;
+  color: var(--title-text-color);
 }
 
-.сontent__heading-h3_margin {
-  margin-block-end: 20px;
-}
-
-.сontent__heading-h4 {
-  margin: 0;
+.content__article h4 {
+  display: block;
   font-weight: normal;
-  font-size: var(--text-foont-size, 18px);
+  font-size: inherit;
+  color: var(--title-text-color);
   line-height: 23.4px;
 }
+
+ h4:first-of-type .content__section{
+  margin-block-start: 20px;
+} 
 
 .сontent__paragraph {
-  margin: 0;
   padding-top: 10px;
   line-height: 23.4px;
 }
@@ -220,7 +214,6 @@
 }
 
 .header__theme-menu-button:hover {
-  /* --bottom-color: #ff007099; */
   border: 1px solid var(--bottom-color-hover);
   cursor: pointer;
 }
