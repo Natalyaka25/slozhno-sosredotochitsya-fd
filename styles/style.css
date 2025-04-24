@@ -54,7 +54,7 @@
   align-items: center;
   gap: 10px;
   color: var(--accent-color);
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, monospace);
   font-size: var(--text-foont-size);
   text-transform:uppercase;
   inset-block-start: var(--rec-block-start);
@@ -86,7 +86,7 @@
 .header__theme-menu-button {
   border: 1px solid transparent;
   color: var(--text-menu-color);
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, monospace);
   font-size: var(--text-foont-size);
   line-height: 13px;
   text-transform: lowercase;
@@ -97,7 +97,7 @@
 
 .header__heading {
   color: var(--heading-color);
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, monospace);
   font-weight: bold;
   font-size: var(--heading-font-size);
   line-height: 83%;
@@ -111,7 +111,7 @@
 .header__title {
   display: inline-block;
   margin: 0;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, monospace);
   font-weight: bold;
   font-size: var(--text-foont-size);
   line-height: 23.4px;
@@ -133,6 +133,7 @@
   padding: 0 var(--padding-page);
   color: var(--text-color);
   font-size: var(--text-foont-size);
+  width: 100%;
 }
 
 .content__section {
@@ -168,9 +169,9 @@
   line-height: 23.4px;
 }
 
- h4:first-of-type .content__section{
+.content__article h3 ~ h4 {
   margin-block-start: 20px;
-} 
+}  
 
 .сontent__paragraph {
   padding-top: 10px;
@@ -187,6 +188,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--padding-page);
+  list-style-type: none;
+  padding: 0;
 }
 
 .picture {
@@ -207,6 +210,7 @@
   text-align: center;
   text-shadow: 2px 2px 0 var(--text-shadow-color);
   block-size: 100vh;
+  max-block-size: 668px;
 }
 
 .header__theme-menu-button:disabled {
@@ -267,9 +271,10 @@
 
   .section__gallery {
     grid-template-columns: repeat(3, 1fr);
+
   }
 
-  .сontent__heading-h3 {
+  .сontent__heading h3{
     grid-column: 1/4;
   }
 
@@ -316,9 +321,19 @@
     display: inline-block;
     letter-spacing: 23px;
   }
+  .content__section {
+    grid-column: auto; 
 
-  .content__article-section {
-    grid-column: auto;
-    grid-row-start: 2;
-  }
-}  
+
+
+
+}
+
+.content__article-section {
+  grid-column: auto;
+  grid-row: 2;
+}
+
+
+ 
+}
