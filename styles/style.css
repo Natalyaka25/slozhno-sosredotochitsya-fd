@@ -9,7 +9,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  /* min-inline-size: 375px; */
   max-inline-size: 1024px;
 }
 
@@ -129,11 +128,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+  width: 100%;
   margin-block-start: var(--margin-block-content);
   padding: 0 var(--padding-page);
   color: var(--text-color);
   font-size: var(--text-foont-size);
-  width: 100%;
 }
 
 .content__section {
@@ -156,22 +155,26 @@
 
 .content h3 {
   display: block;
+  color: var(--title-text-color);
   font-weight: bold;
   font-size: inherit;
-  color: var(--title-text-color);
 }
+
+li:not(:last-child) .сontent__paragraph {
+  margin-block-end: 20px;
+} 
 
 .content__article h4 {
   display: block;
+  color: var(--title-text-color);
   font-weight: normal;
   font-size: inherit;
-  color: var(--title-text-color);
   line-height: 23.4px;
 }
 
 .content__article h3 ~ h4 {
   margin-block-start: 20px;
-}  
+}
 
 .сontent__paragraph {
   padding-top: 10px;
@@ -188,8 +191,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--padding-page);
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 .picture {
@@ -210,7 +213,7 @@
   text-align: center;
   text-shadow: 2px 2px 0 var(--text-shadow-color);
   block-size: 100vh;
-  max-block-size: 668px;
+  min-block-size: 668px;
 }
 
 .header__theme-menu-button:disabled {
@@ -261,20 +264,19 @@
     font-weight: normal;
   }
   
-  .content__article {
+  .content__section-blok {
     grid-column: 2/4;
   }
-  
-  .content__article-section {
+
+  .content__section-blok-list {
     grid-column: 1/4;
   }
-
+    
   .section__gallery {
     grid-template-columns: repeat(3, 1fr);
-
   }
 
-  .сontent__heading h3{
+  .section__gallery .сontent__heading {
     grid-column: 1/4;
   }
 
@@ -294,7 +296,6 @@
   .picture:nth-child(6) {
     grid-column: 2/4;
   }
-
 }
 
 @media (width >= 1024px) {
@@ -309,8 +310,8 @@
     justify-items: center;
     align-self: baseline;
     width: 100%;
-    padding-inline-start: 10px;
-    padding-block-start: 5px;
+    padding-inline-start: 18px;
+    padding-block-start: 9px;
   }
   
   .header__theme-menu-list {
@@ -321,19 +322,11 @@
     display: inline-block;
     letter-spacing: 23px;
   }
-  .content__section {
-    grid-column: auto; 
 
-
-
-
-}
-
-.content__article-section {
-  grid-column: auto;
-  grid-row: 2;
-}
-
-
- 
+  .content__section-blok-list {
+    display: grid;   
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-start: 1;
+    gap: 20px;
+  } 
 }
