@@ -324,9 +324,10 @@ li:not(:last-child) .сontent__paragraph {
   }
 
   .content__section-blok-list {
-    display: grid;   
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-start: 1;
     gap: 20px;
-  } 
+  }
+
 }
